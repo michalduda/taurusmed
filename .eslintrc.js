@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     'no-console': isProd ? 'warn' : 'off',
     'no-debugger': isProd ? 'warn' : 'off',
-    'no-unused-vars': isProd ? 'error' : 'off'
+    'no-unused-vars': isProd ? 'error' : 'off',
+    'space-before-function-paren': 'off'
   }
 }
