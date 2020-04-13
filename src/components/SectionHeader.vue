@@ -2,7 +2,7 @@
   <header class="main-header">
     <div class="row main-header__wrapper">
       <div class="col-sm-2 offset-1">
-        <img class="main-header__logo" src="@/assets/taurusmed-logo.png" alt />
+        <img class="main-header__logo" src="@/assets/taurusmed-logo.svg" alt />
       </div>
       <div class="col-sm-11">
         <p class="main-header__claim">profesjonalne systemy informatyczne</p>
@@ -33,6 +33,6 @@ export default {}
   align-items: center;
 }
 .main-header__claim {
-  margin-left: 70px;
+  margin-left: 5.85%;
 }
 </style>
