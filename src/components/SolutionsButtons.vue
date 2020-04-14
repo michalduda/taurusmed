@@ -1,10 +1,7 @@
 <template>
-  <div class="about-buttons">
-    <button class="about-button">
-      Rozwiązania indywidualne
-    </button>
-    <button class="about-button">
-      Oprogramowanie
+  <div class="solutions-buttons">
+    <button class="solutions-button">
+      Skontaktuj się z nami
     </button>
   </div>
 </template>
@@ -16,9 +13,9 @@ export default {
 </script>
 
 <style lang="scss">
-.about-buttons{
+.solutions-buttons{
 }
-.about-button{
+.solutions-button{
   margin-bottom: 25px;
   min-width: 225px;
   &:not(:last-of-type){
