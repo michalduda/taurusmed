@@ -16,6 +16,7 @@ module.exports = {
     'no-console': isProd ? 'warn' : 'off',
     'no-debugger': isProd ? 'warn' : 'off',
     'no-unused-vars': isProd ? 'error' : 'off',
+    "vue/no-unused-components": isProd ? 'error' : 'warn',
     'space-before-function-paren': 'off'
   }
 }

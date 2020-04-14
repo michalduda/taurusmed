@@ -1,6 +1,6 @@
 <template>
   <div class="about-texts">
-    <h1 class="about-texts__header">Podejmujemy wyzwanie cyfrowej medycyny.</h1>
+    <h2 class="about-texts__header">Podejmujemy wyzwanie cyfrowej medycyny.</h2>
     <p
       class="about-texts__text bold"
     >Dostarczamy dedykowane systemy informatyczne stworzone z myślą o ludzkiej stronie cyfrowej medycyny. Stawiamy na estetykę i funkcjonalność.</p>
@@ -22,7 +22,6 @@ export default {}
   margin-bottom: 50px;
 }
 .about-texts__header {
-  font-size: 28px;
   width: 80%;
   margin-bottom: 50px;
 }
