@@ -1,10 +1,20 @@
 <template>
   <div class="newsletter-subscribe">
     <div class="text-input__wrapper">
-      <input class="text-input" type="text" name id placeholder="zapisz sie do newslettera"/>
-      <button class="text-input__button">&gt;</button>
+      <input
+        id
+        class="text-input"
+        type="text"
+        name
+        placeholder="zapisz sie do newslettera"
+      />
+      <button class="text-input__button">
+        &gt;
+      </button>
     </div>
-    <p class="text-input__messages">some error message</p>
+    <p class="text-input__messages">
+      some error message
+    </p>
   </div>
 </template>
 
@@ -29,7 +39,7 @@ export default {}
 .text-input {
   background: $color-gray;
   border: none;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 0;
   width: calc(100% - 30px);
   &:focus {

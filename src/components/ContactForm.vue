@@ -1,13 +1,145 @@
 <template>
-  <aside class="contact-form">
-    <textarea name id class="contact-form__input"></textarea>
-    <p class="contact-form__messages">some error message</p>
-    <button class="contact-form__button">Wyślij wiadomość</button>
-  </aside>
+  <form
+    class="contact-form"
+    @submit="prepareForSubmit"
+  >
+    <input
+      v-model="email"
+      type="text"
+      name="email"
+      class="contact-form__email"
+      placeholder="email"
+      :disabled="formState === formStates.SENDING || formState === formStates.SENT"
+      @keyup="validateEmail"
+    />
+    <p
+      v-if="emailError"
+      class="contact-form__error-messages"
+    >
+      {{ emailError }}
+    </p>
+
+    <textarea
+      v-model="message"
+      name="message"
+      class="contact-form__message"
+      placeholder="napisz wiadomość"
+      :disabled="formState === formStates.SENDING || formState === formStates.SENT"
+      @keyup="validateMessage"
+    ></textarea>
+    <p
+      v-if="messageError"
+      class="contact-form__error-messages"
+    >
+      {{ messageError }}
+    </p>
+
+    <p
+      v-if="notification"
+      class="contact-form__notification"
+    >
+      {{ notification }}
+    </p>
+
+    <base-button
+      :disabled="formState === formStates.SENDING || formState === formStates.SENT"
+      :loading="formState === formStates.SENDING"
+      class="contact-form__button aaa"
+    >
+      Wyślij wiadomość
+    </base-button>
+  </form>
 </template>
 
 <script>
-export default {}
+import validateEmailPattern from '@/helpers/validateEmail'
+export default {
+  data() {
+    return {
+      email: null,
+      emailError: null,
+      message: null,
+      messageError: null,
+      formState: 'initial',
+      formStates: {
+        INITIAL: 'initial',
+        SENDING: 'sending',
+        SENT: 'sent',
+        ERROR: 'error'
+      },
+      formTexts: {
+        MESSAGE_SENT: 'Twoja wiadomość została wysłana',
+        MESSAGE_SENDING: 'Wysyłam wiadomość...',
+        ERROR_SENDING: 'Wystąpił błąd podczas wysyłania wiadomości',
+        ERROR_NO_MESSAGE: 'Wprowadź wiadomość',
+        ERROR_INVALID_EMAIL: 'Wprowadź poprawny adres email'
+      }
+    }
+  },
+  computed: {
+    notification() {
+      switch (this.formState) {
+        case this.formStates.SENDING:
+          return this.formTexts.MESSAGE_SENDING
+        case this.formStates.SENT:
+          return this.formTexts.MESSAGE_SENT
+        default:
+          return null
+      }
+    }
+  },
+  methods: {
+    validateEmail() {
+      if (!this.email || !validateEmailPattern(this.email)) {
+        return false
+      } else {
+        this.emailError = null
+        return true
+      }
+    },
+    validateMessage() {
+      if (!this.message) {
+        return false
+      } else {
+        this.messageError = null
+        return true
+      }
+    },
+    clearForm() {
+      // this.message = null
+      // this.email = null
+      this.formState = this.formStates.INITIAL
+    },
+    prepareForSubmit(e) {
+      e.preventDefault()
+
+      let shouldSubmit = true
+
+      if (!this.validateEmail()) {
+        shouldSubmit = false
+        this.emailError = this.formTexts.ERROR_INVALID_EMAIL
+      }
+      if (!this.validateMessage()) {
+        shouldSubmit = false
+        this.messageError = this.formTexts.ERROR_NO_MESSAGE
+      }
+
+      if (shouldSubmit) {
+        this.submitForm()
+      }
+    },
+    submitForm() {
+      this.formState = this.formStates.SENDING
+
+      setTimeout(() => {
+        this.formState = this.formStates.SENT
+      }, 500)
+      setTimeout(() => {
+        this.clearForm()
+      }, 5000)
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -16,24 +148,24 @@ export default {}
   width: 100%;
   flex-wrap: wrap;
 }
-.contact-form__input {
-  width: 100%;
-  background-color: $color-gray;
-  border: none;
-  min-height: 150px;
-  resize: none;
-  padding: 10px;
-  &:focus {
-    outline: none;
-  }
+
+.contact-form__email {
 }
-.contact-form__messages {
+.contact-form__message {
+  min-height: 100px;
+  margin-top: 10px;
+}
+.contact-form__notification {
+  margin-left: auto;
+  width: 100%;
+}
+.contact-form__error-messages {
   width: 100%;
   font-size: 0.8rem;
   margin: 0;
+  color: $color-primary;
 }
-
-.contact-form__button{
+.contact-form__button {
   margin-top: 20px;
   margin-left: auto;
 }
