@@ -44,7 +44,8 @@
     <base-button
       :disabled="formState === formStates.SENDING || formState === formStates.SENT"
       :loading="formState === formStates.SENDING"
-      class="contact-form__button aaa"
+      class="contact-form__button"
+      type="submit"
     >
       Wyślij wiadomość
     </base-button>
@@ -54,6 +55,7 @@
 
 <script>
 import validateEmailPattern from '@/helpers/validateEmail'
+
 export default {
   data() {
     return {
@@ -150,12 +152,13 @@ export default {
 .contact-form__email {
 }
 .contact-form__message {
-  min-height: 100px;
+  min-height: 110px;
   margin-top: 10px;
 }
 .contact-form__notification {
   width: 100%;
   margin-bottom: 0;
+  font-size: 0.8rem;
 }
 .contact-form__error-messages {
   width: 100%;
