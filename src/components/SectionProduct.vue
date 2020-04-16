@@ -2,7 +2,9 @@
   <section class="product">
     <div class="row">
       <div class="col-sm-10 offset-sm-2">
-        <h2 class="product__header">Wirtualny gabinet</h2>
+        <h2 class="product__header">
+          Wirtualny gabinet
+        </h2>
       </div>
     </div>
     <product-texts />

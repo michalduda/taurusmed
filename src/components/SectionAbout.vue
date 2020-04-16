@@ -1,9 +1,9 @@
 <template>
   <section class="solutions">
     <image-text-wrapper v-bind="{ visual }">
-        <about-navigation />
-        <about-texts />
-        <about-buttons />
+      <about-navigation />
+      <about-texts />
+      <about-buttons />
     </image-text-wrapper>
   </section>
 </template>
