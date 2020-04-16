@@ -47,25 +47,9 @@
       class="contact-form__button aaa"
     >
       Wyślij wiadomość
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="21.904761904761905 21.904761904761905 43.80952380952381 43.80952380952381"
-        style="transform: rotate(0deg);"
-      >
-        <circle
-          fill="transparent"
-          cx="43.80952380952381"
-          cy="43.80952380952381"
-          r="20"
-          stroke-width="3.8095238095238093"
-          stroke-dasharray="125.664"
-          stroke-dashoffset="125.66370614359172px"
-          class="v-progress-circular__overlay"
-        ></circle>
-      </svg>
     </base-button>
-
   </form>
+
 </template>
 
 <script>
@@ -86,7 +70,6 @@ export default {
       },
       formTexts: {
         MESSAGE_SENT: 'Twoja wiadomość została wysłana',
-        MESSAGE_SENDING: 'Wysyłam wiadomość...',
         ERROR_SENDING: 'Wystąpił błąd podczas wysyłania wiadomości',
         ERROR_NO_MESSAGE: 'Wprowadź wiadomość',
         ERROR_INVALID_EMAIL: 'Wprowadź poprawny adres email'
@@ -96,8 +79,6 @@ export default {
   computed: {
     notification() {
       switch (this.formState) {
-        case this.formStates.SENDING:
-          return this.formTexts.MESSAGE_SENDING
         case this.formStates.SENT:
           return this.formTexts.MESSAGE_SENT
         default:
@@ -123,8 +104,8 @@ export default {
       }
     },
     clearForm() {
-      // this.message = null
-      // this.email = null
+      this.message = null
+      this.email = null
       this.formState = this.formStates.INITIAL
     },
     prepareForSubmit(e) {
