@@ -31,6 +31,7 @@
     <p
       v-if="notification"
       class="newsletter-subscribe__notification"
+      :class="{ 'newsletter-subscribe__notification--error': formState === formStates.ERROR }"
     >
       {{ notification }}
     </p>
@@ -39,6 +40,7 @@
 
 <script>
 import validateEmailPattern from '@/helpers/validateEmail'
+import axios from 'axios'
 
 export default {
   data() {
@@ -54,7 +56,7 @@ export default {
       },
       formTexts: {
         MESSAGE_SENT: 'Zapisano do newslettera',
-        ERROR_SENDING: 'Wystąpił błąd podczas zapisywania',
+        ERROR_SENDING: 'Wystąpił błąd podczas wysyłania',
         ERROR_INVALID_EMAIL: 'Wprowadź poprawny adres email'
       }
     }
@@ -64,6 +66,8 @@ export default {
       switch (this.formState) {
         case this.formStates.SENT:
           return this.formTexts.MESSAGE_SENT
+        case this.formStates.ERROR:
+          return this.formTexts.ERROR_SENDING
         default:
           return null
       }
@@ -99,11 +103,36 @@ export default {
     submitForm() {
       this.formState = this.formStates.SENDING
 
-      setTimeout(() => {
-        this.formState = this.formStates.SENT
-      }, 500)
+      const formData = new FormData()
+      formData.set('email', this.email)
+
+      axios({
+        method: 'post',
+        url: process.env.VUE_APP_NEWSLETTER_API,
+        data: formData,
+        headers: { 'Content-Type': 'multipart/form-data' }
+      })
+        .then((response) => {
+          if (response.data && response.data.status === 'mail_sent') {
+            this.handleSubmitSuccess()
+          } else {
+            this.handleSubmitError()
+          }
+        })
+        .catch((error) => {
+          this.handleSubmitError(error)
+        })
+    },
+    handleSubmitSuccess() {
+      this.formState = this.formStates.SENT
       setTimeout(() => {
         this.clearForm()
+      }, 5000)
+    },
+    handleSubmitError() {
+      this.formState = this.formStates.ERROR
+      setTimeout(() => {
+        this.formState = this.formStates.INITIAL
       }, 5000)
     }
   }
@@ -134,6 +163,9 @@ export default {
   width: 100%;
   margin-bottom: 0;
   font-size: 0.8rem;
+}
+.newsletter-subscribe__notification--error{
+  color: $color-primary;
 }
 .newsletter-subscribe__error-message {
   width: 100%;
