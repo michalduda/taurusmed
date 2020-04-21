@@ -21,7 +21,7 @@ const post = async (url, data) => {
 
 const sendNewsletterSignup = async (data) => {
   try {
-    const response = await post(process.env.VUE_APP_NEWSLETTER_API, data)
+    await post(process.env.VUE_APP_NEWSLETTER_API, data)
     return true
   } catch (error) {
     return false
@@ -29,7 +29,7 @@ const sendNewsletterSignup = async (data) => {
 }
 const sendContactForm = async (data) => {
   try {
-    const response = await post(process.env.VUE_APP_CONTACT_API, data)
+    await post(process.env.VUE_APP_CONTACT_API, data)
     return true
   } catch (error) {
     return false
