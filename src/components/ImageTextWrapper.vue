@@ -2,7 +2,10 @@
   <div class="row">
     <div class="col-sm-7">
       <div class="image-text__visual-wrapper">
-        <div class="image-text__visual" v-bind="{ style }"></div>
+        <div
+          class="image-text__visual"
+          v-bind="{ style }"
+        ></div>
       </div>
     </div>
     <div class="col-sm-5 offset-1 image-text__text-wrapper">

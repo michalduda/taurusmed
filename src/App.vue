@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-      <section-header />
-      <section-about />
-      <section-product />
-      <section-mission />
-      <section-solutions />
-      <section-contact />
+    <section-header />
+    <section-about />
+    <section-product />
+    <section-mission />
+    <section-solutions />
+    <section-contact />
   </div>
 </template>
 

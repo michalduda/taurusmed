@@ -3,11 +3,21 @@
     <div class="row">
       <div class="col-sm-8 offset-sm-3">
         <div class="mission__wrapper">
-          <span class="bold">Medical</span>
-          <span>/</span>
-          <span class="bold">Digital</span>
-          <span>/</span>
-          <span>Wonderland</span>
+          <span class="bold">
+            Medical
+          </span>
+          <span>
+            /
+          </span>
+          <span class="bold">
+            Digital
+          </span>
+          <span>
+            /
+          </span>
+          <span>
+            Wonderland
+          </span>
         </div>
       </div>
     </div>

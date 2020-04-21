@@ -1,15 +1,23 @@
 <template>
   <div class="about-texts">
-    <h2 class="about-texts__header">Podejmujemy wyzwanie cyfrowej medycyny.</h2>
+    <h2 class="about-texts__header">
+      Podejmujemy wyzwanie cyfrowej medycyny.
+    </h2>
     <p
       class="about-texts__text bold"
-    >Dostarczamy dedykowane systemy informatyczne stworzone z myślą o ludzkiej stronie cyfrowej medycyny. Stawiamy na estetykę i funkcjonalność.</p>
+    >
+      Dostarczamy dedykowane systemy informatyczne stworzone z myślą o ludzkiej stronie cyfrowej medycyny. Stawiamy na estetykę i funkcjonalność.
+    </p>
     <p
       class="about-texts__text"
-    >Nasze produkty są zaprojektowane z dbałością o komfort i łatwość użytkowania: intuicyjne i zintegrowane.</p>
+    >
+      Nasze produkty są zaprojektowane z dbałością o komfort i łatwość użytkowania: intuicyjne i zintegrowane.
+    </p>
     <p
       class="about-texts__text"
-    >Łatwe w użyciu dla pacjenta i specjalistów. Pozwalają zdigitalizować usługę zachowując jej indywidualny charakter spotkań.</p>
+    >
+      Łatwe w użyciu dla pacjenta i specjalistów. Pozwalają zdigitalizować usługę zachowując jej indywidualny charakter spotkań.
+    </p>
   </div>
 </template>
 

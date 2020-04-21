@@ -2,13 +2,21 @@
   <div class="product-texts">
     <div class="row">
       <div class="col-sm-4 offset-sm-2">
-        <div class="product-texts__logo">medictel</div>
+        <img
+          src="@/assets/medictel-1.0.svg"
+          alt="Medictel logo"
+          class="product-texts__logo"
+        >
         <p
           class="product-texts__text bold"
-        >Kompleksowe oprogramowanie wirtualnych gabinetów i przychodni.</p>
+        >
+          Kompleksowe oprogramowanie wirtualnych gabinetów i przychodni.
+        </p>
         <p
           class="product-texts__text"
-        >Stworzyliśmy dwie wersje dedykowanego oprogramowania: skierowane do obiorców indywidualnych oraz instytucji ochrony zdrowia.</p>
+        >
+          Stworzyliśmy dwie wersje dedykowanego oprogramowania: skierowane do obiorców indywidualnych oraz instytucji ochrony zdrowia.
+        </p>
       </div>
     </div>
   </div>
@@ -19,4 +27,8 @@ export default {}
 </script>
 
 <style>
+.product-texts__logo{
+  width: 60%;
+  margin-bottom: 32px;
+}
 </style>

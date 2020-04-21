@@ -2,10 +2,22 @@
   <nav class="about-navigation">
     <ul class="about-navigation__list">
       <template v-for="(item, index) in items">
-        <li class="about-navigation__item" :key="item.id">
-          <a :href="item.element" class="about-navigation__link">{{ item.name }}</a>
+        <li
+          :key="item.id"
+          class="about-navigation__item"
+        >
+          <a
+            :href="item.element"
+            class="about-navigation__link"
+          >
+            {{ item.name }}
+          </a>
         </li>
-        <li v-if="items.length -1 !== index" class="about-navigation__item" :key="`${item.id}-separator`">
+        <li
+          v-if="items.length -1 !== index"
+          :key="`${item.id}-separator`"
+          class="about-navigation__item"
+        >
           <span class="about-navigation__separator">
             /
           </span>

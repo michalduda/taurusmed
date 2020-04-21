@@ -2,10 +2,16 @@
   <header class="main-header">
     <div class="row main-header__wrapper">
       <div class="col-sm-2 offset-1">
-        <img class="main-header__logo" src="@/assets/taurusmed-logo.svg" alt />
+        <img
+          class="main-header__logo"
+          src="@/assets/taurusmed-logo.svg"
+          alt
+        />
       </div>
       <div class="col-sm-11">
-        <p class="main-header__claim">profesjonalne systemy informatyczne</p>
+        <p class="main-header__claim">
+          profesjonalne systemy informatyczne
+        </p>
       </div>
     </div>
   </header>
