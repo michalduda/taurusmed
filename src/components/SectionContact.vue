@@ -10,9 +10,11 @@
     <div class="row">
       <div class="col-sm-3 offset-sm-3">
         <div class="contact__info">
-          <div class="contact__logo-wrapper">
-            TAURUSMED
-          </div>
+          <img
+            src="@/assets/taurusmed-logo.svg"
+            alt="Taurusmed logo"
+            class="contact__logo"
+          >
           <div class="contact__texts">
             <a
               class="contact__link"
@@ -49,8 +51,14 @@ export default {
 </script>
 
 <style>
+.contact__header{
+}
+.contact__logo{
+  width: 42.5%;
+  margin-top: 15px;
+}
 .contact__texts{
-  margin: 30px 0;
+  margin: 25px 0 40px 0;
 }
 .contact__link{
   text-decoration: none;

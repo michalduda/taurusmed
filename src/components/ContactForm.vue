@@ -170,7 +170,7 @@ export default {
   flex-wrap: wrap;
 }
 .contact-form__message {
-  min-height: 110px;
+  min-height: 126px;
   margin-top: 10px;
 }
 .contact-form__notification {

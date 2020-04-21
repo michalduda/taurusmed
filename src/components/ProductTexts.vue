@@ -2,9 +2,11 @@
   <div class="product-texts">
     <div class="row">
       <div class="col-sm-4 offset-sm-2">
-        <div class="product-texts__logo">
-          medictel
-        </div>
+        <img
+          src="@/assets/medictel-1.0.svg"
+          alt="Medictel logo"
+          class="product-texts__logo"
+        >
         <p
           class="product-texts__text bold"
         >
@@ -25,4 +27,8 @@ export default {}
 </script>
 
 <style>
+.product-texts__logo{
+  width: 60%;
+  margin-bottom: 32px;
+}
 </style>
