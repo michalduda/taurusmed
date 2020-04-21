@@ -40,7 +40,7 @@
 
 <script>
 import validateEmailPattern from '@/helpers/validateEmail'
-import axios from 'axios'
+import { sendNewsletterSignup } from '@/services/Api'
 
 export default {
   data() {
@@ -100,28 +100,19 @@ export default {
         this.submitForm()
       }
     },
-    submitForm() {
+    async submitForm() {
       this.formState = this.formStates.SENDING
 
       const formData = new FormData()
       formData.set('email', this.email)
 
-      axios({
-        method: 'post',
-        url: process.env.VUE_APP_NEWSLETTER_API,
-        data: formData,
-        headers: { 'Content-Type': 'multipart/form-data' }
-      })
-        .then((response) => {
-          if (response.data && response.data.status === 'mail_sent') {
-            this.handleSubmitSuccess()
-          } else {
-            this.handleSubmitError()
-          }
-        })
-        .catch((error) => {
-          this.handleSubmitError(error)
-        })
+      const sendingStatus = await sendNewsletterSignup(formData)
+
+      if (sendingStatus) {
+        this.handleSubmitSuccess()
+      } else {
+        this.handleSubmitError()
+      }
     },
     handleSubmitSuccess() {
       this.formState = this.formStates.SENT

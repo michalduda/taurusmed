@@ -37,6 +37,7 @@
     <p
       v-if="notification"
       class="contact-form__notification"
+      :class="{ 'contact-form__notification--error': formState === formStates.ERROR }"
     >
       {{ notification }}
     </p>
@@ -55,6 +56,7 @@
 
 <script>
 import validateEmailPattern from '@/helpers/validateEmail'
+import { sendContactForm } from '@/services/Api'
 
 export default {
   data() {
@@ -83,6 +85,8 @@ export default {
       switch (this.formState) {
         case this.formStates.SENT:
           return this.formTexts.MESSAGE_SENT
+        case this.formStates.ERROR:
+          return this.formTexts.ERROR_SENDING
         default:
           return null
       }
@@ -128,14 +132,31 @@ export default {
         this.submitForm()
       }
     },
-    submitForm() {
+    async submitForm() {
       this.formState = this.formStates.SENDING
 
-      setTimeout(() => {
-        this.formState = this.formStates.SENT
-      }, 500)
+      const formData = new FormData()
+      formData.set('email', this.email)
+      formData.set('message', this.message)
+
+      const sendingStatus = await sendContactForm(formData)
+
+      if (sendingStatus) {
+        this.handleSubmitSuccess()
+      } else {
+        this.handleSubmitError()
+      }
+    },
+    handleSubmitSuccess() {
+      this.formState = this.formStates.SENT
       setTimeout(() => {
         this.clearForm()
+      }, 5000)
+    },
+    handleSubmitError() {
+      this.formState = this.formStates.ERROR
+      setTimeout(() => {
+        this.formState = this.formStates.INITIAL
       }, 5000)
     }
   }
@@ -148,9 +169,6 @@ export default {
   width: 100%;
   flex-wrap: wrap;
 }
-
-.contact-form__email {
-}
 .contact-form__message {
   min-height: 110px;
   margin-top: 10px;
@@ -159,6 +177,9 @@ export default {
   width: 100%;
   margin-bottom: 0;
   font-size: 0.8rem;
+}
+.contact-form__notification--error{
+  color: $color-primary;
 }
 .contact-form__error-messages {
   width: 100%;
