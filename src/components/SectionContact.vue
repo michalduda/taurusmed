@@ -54,7 +54,7 @@ export default {
 .contact__header{
 }
 .contact__logo{
-  width: 42.5%;
+  height: 15px;
   margin-top: 15px;
 }
 .contact__texts{

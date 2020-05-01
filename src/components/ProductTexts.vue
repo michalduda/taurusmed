@@ -28,7 +28,7 @@ export default {}
 
 <style>
 .product-texts__logo{
-  width: 60%;
+  height: 25px;
   margin-bottom: 32px;
 }
 </style>

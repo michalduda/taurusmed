@@ -27,5 +27,6 @@ export default {
 <style>
 .product__header {
   text-align: right;
+  margin-bottom: 0;
 }
 </style>

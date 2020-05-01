@@ -5,11 +5,13 @@
         <div
           class="image-text__visual"
           v-bind="{ style }"
-        ></div>
+        >
+          <slot name="visual-slot" />
+        </div>
       </div>
     </div>
     <div class="col-sm-5 offset-1 image-text__text-wrapper">
-      <slot />
+      <slot name="default" />
     </div>
   </div>
 </template>
@@ -45,6 +47,8 @@ export default {
   background-size: cover;
   width: 53.846%;
   min-height: 590px;
+  display: flex;
+  align-items: flex-end;
 }
 .image-text__text-wrapper {
   display: flex;

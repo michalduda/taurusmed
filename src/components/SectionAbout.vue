@@ -1,9 +1,20 @@
 <template>
-  <section class="solutions">
+  <section class="about">
     <image-text-wrapper v-bind="{ visual }">
-      <about-navigation />
-      <about-texts />
-      <about-buttons />
+      <template v-slot:visual-slot>
+        <div class="about-visual__logo-wrapper">
+          <img
+            src="@/assets/medictel-virtual-office.svg"
+            alt="medictel-logo"
+            class="about-visual__logo"
+          >
+        </div>
+      </template>
+      <template v-slot:default>
+        <about-navigation />
+        <about-texts />
+        <about-buttons />
+      </template>
     </image-text-wrapper>
   </section>
 </template>
@@ -33,4 +44,12 @@ export default {
 </script>
 
 <style>
+.about-visual__logo-wrapper{
+  flex: 1;
+}
+.about-visual__logo{
+  display: block;
+  width: 50%;
+  margin: 50px auto;
+}
 </style>
