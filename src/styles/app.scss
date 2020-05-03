@@ -16,6 +16,7 @@ html {
 
 body {
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 a {
@@ -59,7 +60,10 @@ h2 {
 }
 
 section {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  @include md{
+    margin-bottom: 100px;
+  }
 }
 
 .bold {

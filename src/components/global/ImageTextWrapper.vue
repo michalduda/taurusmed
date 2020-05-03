@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-5 offset-1 image-text__text-wrapper">
+    <div class="col-12 col-sm-5 offset-1 image-text__text-wrapper">
       <slot name="default" />
     </div>
   </div>

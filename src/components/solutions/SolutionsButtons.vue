@@ -20,8 +20,6 @@ export default {
 </script>
 
 <style lang="scss">
-.solutions-buttons{
-}
 .solutions-button{
   margin-bottom: 25px;
   min-width: 225px;

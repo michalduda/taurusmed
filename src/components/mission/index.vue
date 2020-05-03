@@ -1,7 +1,7 @@
 <template>
   <section class="mission">
     <div class="row">
-      <div class="col-sm-8 offset-sm-3">
+      <div class="col-12 offset-1 col-sm-8 offset-sm-3">
         <div class="mission__wrapper">
           <span class="bold">
             Medical
@@ -29,13 +29,23 @@ export default {}
 </script>
 
 <style lang="scss">
-.mission__wrapper{
-  font-size: 1.556rem;
+section.mission {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.mission__wrapper {
+  font-size: 1.3rem;
   color: $color-primary;
   display: flex;
   justify-content: space-around;
   span {
-    margin: 0 10px;
+    margin: 0 5px;
+  }
+  @include sm {
+    font-size: 1.556rem;
+    span {
+      margin: 0 10px;
+    }
   }
 }
 </style>

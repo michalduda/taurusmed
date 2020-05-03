@@ -1,3 +1,7 @@
+import smoothscroll from 'smoothscroll-polyfill'
+
+smoothscroll.polyfill()
+
 export default (event, selector, topMargin = 0) => {
   event.preventDefault()
   const element = document.querySelector(selector)

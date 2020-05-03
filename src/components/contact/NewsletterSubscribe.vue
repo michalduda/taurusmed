@@ -133,6 +133,10 @@ export default {
 <style lang="scss">
 .newsletter-subscribe__wrapper {
   display: flex;
+  margin-bottom: 25px;
+  @include md{
+    margin-bottom: 0;
+  }
 }
 .newsletter-subscribe__button.base-button{
   background: $color-primary ;

@@ -1,7 +1,7 @@
 <template>
   <div class="product-texts">
     <div class="row">
-      <div class="col-sm-4 offset-sm-2">
+      <div class="col-12 offset-1 col-md-10 offset-md-2 col-lg-4">
         <img
           src="@/assets/medictel-1.0.svg"
           alt="Medictel logo"
@@ -26,7 +26,15 @@
 export default {}
 </script>
 
-<style>
+<style lang="scss">
+.product-texts{
+  @include sm{
+    margin-bottom: 50px;
+  }
+  @include lg{
+    margin-bottom: 0;
+  }
+}
 .product-texts__logo{
   height: 25px;
   margin-bottom: 32px;

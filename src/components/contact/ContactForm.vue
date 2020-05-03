@@ -171,7 +171,10 @@ export default {
 }
 .contact-form__message {
   min-height: 130px;
-  margin-top: 10px;
+  margin-top: 5px;
+  @include md{
+    margin-top: 10px;
+  }
 }
 .contact-form__notification {
   width: 100%;
@@ -188,7 +191,7 @@ export default {
   color: $color-primary;
 }
 .contact-form__button {
-  margin-top: 20px;
+  margin-top: 25px;
   margin-left: auto;
 }
 </style>
