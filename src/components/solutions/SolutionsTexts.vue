@@ -30,11 +30,18 @@ export default {}
 <style lang="scss">
 .solutions-texts{
   margin-bottom: 50px;
-  padding-right: 20%;
+  @include lg{
+    padding-right: 20%;
+  }
 }
 .solutions-texts__header {
   width: 80%;
   margin-bottom: 50px;
+  margin-top: 50px;
+
+  @include sm{
+    margin-top: 0.83em;
+  }
 }
 .solutions-texts__text{
   margin-bottom: 25px;

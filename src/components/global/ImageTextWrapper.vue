@@ -5,11 +5,13 @@
         <div
           class="image-text__visual"
           v-bind="{ style }"
-        ></div>
+        >
+          <slot name="visual-slot" />
+        </div>
       </div>
     </div>
-    <div class="col-sm-5 offset-1 image-text__text-wrapper">
-      <slot />
+    <div class="col-12 col-sm-5 offset-1 image-text__text-wrapper">
+      <slot name="default" />
     </div>
   </div>
 </template>
@@ -38,13 +40,26 @@ export default {
   background: $color-primary;
   display: flex;
   flex-direction: row-reverse;
-  width: 92.857%;
+  height: 100%;
+  @include sm {
+    width: 92.857%;
+  }
 }
 .image-text__visual {
   mix-blend-mode: screen;
   background-size: cover;
-  width: 53.846%;
-  min-height: 590px;
+  width: 57.143%;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  @include sm {
+    width: 100%;
+    min-height: 590px;
+  }
+  @include lg {
+    width: 53.846%;
+    min-height: 590px;
+  }
 }
 .image-text__text-wrapper {
   display: flex;

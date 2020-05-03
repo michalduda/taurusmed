@@ -1,70 +1,52 @@
 <template>
   <form
-    class="contact-form"
+    class="newsletter-subscribe"
     @submit="prepareForSubmit"
   >
-    <input
-      v-model="email"
-      type="text"
-      name="email"
-      class="contact-form__email"
-      placeholder="email"
-      :disabled="formState === formStates.SENDING || formState === formStates.SENT"
-      @keyup="validateEmail"
-    />
+    <div class="newsletter-subscribe__wrapper">
+      <input
+        v-model="email"
+        type="text"
+        name="email"
+        class="newsletter-subscribe__email"
+        placeholder="zapisz sie do newslettera"
+        :disabled="formState === formStates.SENDING || formState === formStates.SENT"
+        @keyup="validateEmail"
+      />
+      <base-button
+        :disabled="formState === formStates.SENDING || formState === formStates.SENT"
+        :loading="formState === formStates.SENDING"
+        type="submit"
+        class="newsletter-subscribe__button"
+      >
+        &gt;
+      </base-button>
+    </div>
     <p
       v-if="emailError"
-      class="contact-form__error-messages"
+      class="newsletter-subscribe__error-message"
     >
       {{ emailError }}
     </p>
-
-    <textarea
-      v-model="message"
-      name="message"
-      class="contact-form__message"
-      placeholder="napisz wiadomość"
-      :disabled="formState === formStates.SENDING || formState === formStates.SENT"
-      @keyup="validateMessage"
-    ></textarea>
-    <p
-      v-if="messageError"
-      class="contact-form__error-messages"
-    >
-      {{ messageError }}
-    </p>
-
     <p
       v-if="notification"
-      class="contact-form__notification"
-      :class="{ 'contact-form__notification--error': formState === formStates.ERROR }"
+      class="newsletter-subscribe__notification"
+      :class="{ 'newsletter-subscribe__notification--error': formState === formStates.ERROR }"
     >
       {{ notification }}
     </p>
-
-    <base-button
-      :disabled="formState === formStates.SENDING || formState === formStates.SENT"
-      :loading="formState === formStates.SENDING"
-      class="contact-form__button"
-      type="submit"
-    >
-      Wyślij wiadomość
-    </base-button>
   </form>
-
 </template>
 
 <script>
 import validateEmailPattern from '@/helpers/validateEmail'
-import { sendContactForm } from '@/services/Api'
+import { sendNewsletterSignup } from '@/services/Api'
 
 export default {
   data() {
     return {
       email: null,
       emailError: null,
-      message: null,
-      messageError: null,
       formState: 'initial',
       formStates: {
         INITIAL: 'initial',
@@ -73,9 +55,8 @@ export default {
         ERROR: 'error'
       },
       formTexts: {
-        MESSAGE_SENT: 'Twoja wiadomość została wysłana',
-        ERROR_SENDING: 'Wystąpił błąd podczas wysyłania wiadomości',
-        ERROR_NO_MESSAGE: 'Wprowadź wiadomość',
+        MESSAGE_SENT: 'Zapisano do newslettera',
+        ERROR_SENDING: 'Wystąpił błąd podczas wysyłania',
         ERROR_INVALID_EMAIL: 'Wprowadź poprawny adres email'
       }
     }
@@ -101,16 +82,7 @@ export default {
         return true
       }
     },
-    validateMessage() {
-      if (!this.message) {
-        return false
-      } else {
-        this.messageError = null
-        return true
-      }
-    },
     clearForm() {
-      this.message = null
       this.email = null
       this.formState = this.formStates.INITIAL
     },
@@ -123,10 +95,6 @@ export default {
         shouldSubmit = false
         this.emailError = this.formTexts.ERROR_INVALID_EMAIL
       }
-      if (!this.validateMessage()) {
-        shouldSubmit = false
-        this.messageError = this.formTexts.ERROR_NO_MESSAGE
-      }
 
       if (shouldSubmit) {
         this.submitForm()
@@ -137,9 +105,8 @@ export default {
 
       const formData = new FormData()
       formData.set('email', this.email)
-      formData.set('message', this.message)
 
-      const sendingStatus = await sendContactForm(formData)
+      const sendingStatus = await sendNewsletterSignup(formData)
 
       if (sendingStatus) {
         this.handleSubmitSuccess()
@@ -164,31 +131,41 @@ export default {
 </script>
 
 <style lang="scss">
-.contact-form {
+.newsletter-subscribe__wrapper {
   display: flex;
-  width: 100%;
-  flex-wrap: wrap;
+  margin-bottom: 25px;
+  @include md{
+    margin-bottom: 0;
+  }
 }
-.contact-form__message {
-  min-height: 126px;
-  margin-top: 10px;
+.newsletter-subscribe__button.base-button{
+  background: $color-primary ;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+  &[disabled]{
+    background: gray;
+  }
 }
-.contact-form__notification {
+.newsletter-subscribe__email {
+  width: calc(100% - 30px);
+}
+.newsletter-subscribe__notification {
   width: 100%;
   margin-bottom: 0;
   font-size: 0.8rem;
 }
-.contact-form__notification--error{
+.newsletter-subscribe__notification--error{
   color: $color-primary;
 }
-.contact-form__error-messages {
+.newsletter-subscribe__error-message {
   width: 100%;
   font-size: 0.8rem;
   margin: 0;
   color: $color-primary;
-}
-.contact-form__button {
-  margin-top: 20px;
-  margin-left: auto;
 }
 </style>

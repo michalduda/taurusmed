@@ -1,12 +1,14 @@
+@import 'breakpoints';
+
 @mixin sm {
-  @media (max-width: 560px) { @content; }
+  @media (min-width: $sm) { @content; }
 }
 @mixin md {
-  @media (min-width: 768px) { @content; }
+  @media (min-width: $md) { @content; }
 }
 @mixin lg {
-  @media (min-width: 1080px) { @content; }
+  @media (min-width: $lg) { @content; }
 }
 @mixin xl {
-  @media (min-width: 1200px) { @content; }
+  @media (min-width: $xl) { @content; }
 }

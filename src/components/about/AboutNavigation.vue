@@ -1,5 +1,5 @@
 <template>
-  <nav class="about-navigation">
+  <nav class="about-navigation d-none d-md-block">
     <ul class="about-navigation__list">
       <template v-for="(item, index) in items">
         <li
@@ -9,6 +9,7 @@
           <a
             :href="item.element"
             class="about-navigation__link"
+            @click="scrollToElement($event, item.element)"
           >
             {{ item.name }}
           </a>
@@ -28,6 +29,8 @@
 </template>
 
 <script>
+import scrollToElement from '@/helpers/scrollToElement'
+
 export default {
   data() {
     return {
@@ -35,20 +38,23 @@ export default {
         {
           id: 1,
           name: 'wirtualny gabinet',
-          element: '#virtual-office'
+          element: 'section.product'
         },
         {
           id: 2,
           name: 'rozwiązania indywidualne',
-          element: '#individual-solutions'
+          element: 'section.solutions'
         },
         {
           id: 3,
           name: 'kontakt',
-          element: '#contact'
+          element: 'section.contact'
         }
       ]
     }
+  },
+  methods: {
+    scrollToElement
   }
 }
 </script>
