@@ -11,12 +11,12 @@
 
 <script>
 import '@/styles/app.scss'
-import SectionHeader from '@/components/SectionHeader.vue'
-import SectionAbout from '@/components/SectionAbout.vue'
-import SectionProduct from '@/components/SectionProduct.vue'
-import SectionMission from '@/components/SectionMission.vue'
-import SectionSolutions from '@/components/SectionSolutions.vue'
-import SectionContact from '@/components/SectionContact.vue'
+import SectionHeader from '@/components/header'
+import SectionAbout from '@/components/about'
+import SectionProduct from '@/components/product'
+import SectionMission from '@/components/mission'
+import SectionSolutions from '@/components/solutions'
+import SectionContact from '@/components/contact'
 
 export default {
   name: 'App',

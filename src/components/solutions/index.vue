@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import ImageTextWrapper from '@/components/ImageTextWrapper'
-import SolutionsTexts from '@/components/SolutionsTexts'
-import SolutionsButtons from '@/components/SolutionsButtons'
+import ImageTextWrapper from '@/components/global/ImageTextWrapper'
+import SolutionsTexts from './SolutionsTexts'
+import SolutionsButtons from './SolutionsButtons'
 
 export default {
   components: {

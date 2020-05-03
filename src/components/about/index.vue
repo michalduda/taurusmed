@@ -20,10 +20,10 @@
 </template>
 
 <script>
-import ImageTextWrapper from '@/components/ImageTextWrapper'
-import AboutNavigation from '@/components/AboutNavigation'
-import AboutButtons from '@/components/AboutButtons'
-import AboutTexts from '@/components/AboutTexts'
+import ImageTextWrapper from '@/components/global/ImageTextWrapper'
+import AboutNavigation from './AboutNavigation'
+import AboutButtons from './AboutButtons'
+import AboutTexts from './AboutTexts'
 
 export default {
   components: {

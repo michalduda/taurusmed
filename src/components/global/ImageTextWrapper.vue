@@ -40,15 +40,26 @@ export default {
   background: $color-primary;
   display: flex;
   flex-direction: row-reverse;
-  width: 92.857%;
+  height: 100%;
+  @include sm {
+    width: 92.857%;
+  }
 }
 .image-text__visual {
   mix-blend-mode: screen;
   background-size: cover;
-  width: 53.846%;
-  min-height: 590px;
+  width: 57.143%;
+  min-height: 420px;
   display: flex;
   align-items: flex-end;
+  @include sm {
+    width: 100%;
+    min-height: 590px;
+  }
+  @include lg {
+    width: 53.846%;
+    min-height: 590px;
+  }
 }
 .image-text__text-wrapper {
   display: flex;

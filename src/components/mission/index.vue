@@ -30,7 +30,7 @@ export default {}
 
 <style lang="scss">
 .mission__wrapper{
-  font-size: 28px;
+  font-size: 1.556rem;
   color: $color-primary;
   display: flex;
   justify-content: space-around;

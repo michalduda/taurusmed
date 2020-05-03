@@ -5,10 +5,17 @@
 
 html {
   font-family: 'myriad-pro', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-family: myriad-pro, sans-serif;
   font-style: normal;
   font-weight: 400;
+  @include md{
+    font-size: 18px;
+  }
+}
+
+body {
+  min-width: 320px;
 }
 
 a {
@@ -37,7 +44,7 @@ button {
   color: $color-primary;
   font-weight: bold;
   background: transparent;
-  font-size: 16px;
+  font-size: .889rem;
   padding: 10px 15px;
   cursor: pointer;
   position: relative;
@@ -48,7 +55,7 @@ button {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 1.556rem;
 }
 
 section {

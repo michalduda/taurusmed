@@ -25,13 +25,17 @@
 export default {}
 </script>
 
-<style>
+<style lang="scss">
 .about-texts{
   margin-bottom: 50px;
 }
 .about-texts__header {
   width: 80%;
   margin-bottom: 50px;
+  margin-top: 50px;
+  @include sm{
+    margin-top: 0.83em
+  }
 }
 .about-texts__text{
   margin-bottom: 25px;

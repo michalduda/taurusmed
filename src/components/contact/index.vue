@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import NewsletterSubscribe from '@/components/NewsletterSubscribe'
-import ContactForm from '@/components/ContactForm'
+import NewsletterSubscribe from './NewsletterSubscribe'
+import ContactForm from './ContactForm'
 export default {
   components: {
     NewsletterSubscribe,

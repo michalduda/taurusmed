@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import ProductTexts from '@/components/ProductTexts'
-import ProductVisual from '@/components/ProductVisual'
+import ProductTexts from './ProductTexts'
+import ProductVisual from './ProductVisual'
 
 export default {
   components: {
