@@ -35,6 +35,7 @@ export default {
   data() {
     return {
       visual: {
+        elementMobile: require('@/assets/about-visual-mobile.png'),
         element: require('@/assets/about-visual.png'),
         position: 'top right'
       }

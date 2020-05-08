@@ -18,11 +18,12 @@ export default {
     SolutionsTexts,
     SolutionsButtons
   },
-  data() {
-    return {
-      visual: {
+  computed: {
+    visual() {
+      return {
+        elementMobile: require('@/assets/solutions-visual-mobile.png'),
         element: require('@/assets/solutions-visual.png'),
-        position: 'top left'
+        position: 'top center'
       }
     }
   }
