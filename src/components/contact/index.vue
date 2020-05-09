@@ -30,7 +30,6 @@
               666 666 666
             </a>
           </div>
-          <newsletter-subscribe />
         </div>
       </div>
       <div class="col-12 offset-1 col-md-7 offset-md-0 col-xl-6 offset-xl-0 contact-column__padded">
@@ -41,11 +40,9 @@
 </template>
 
 <script>
-import NewsletterSubscribe from './NewsletterSubscribe'
 import ContactForm from './ContactForm'
 export default {
   components: {
-    NewsletterSubscribe,
     ContactForm
   }
 }
