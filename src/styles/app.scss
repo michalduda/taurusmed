@@ -1,5 +1,6 @@
 @import 'normalize.css/normalize';
 @import '~@/styles/bootstrap/bootstrap-grid.scss';
+@import '~@/styles/hamburger';
 // @import url("https://use.typekit.net/pxd8seh.css");
 @import url('https://use.typekit.net/uza3qya.css');
 
@@ -18,7 +19,10 @@ body {
   min-width: 320px;
   overflow-x: hidden;
 }
-
+.body--no-overflow{
+  overflow-y: hidden;
+  padding-right: 17px;
+}
 a {
   color: $color-primary;
 }
