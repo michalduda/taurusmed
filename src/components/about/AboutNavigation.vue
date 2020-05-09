@@ -30,27 +30,12 @@
 
 <script>
 import scrollToElement from '@/helpers/scrollToElement'
+import { store } from '@/store'
 
 export default {
-  data() {
-    return {
-      items: [
-        {
-          id: 1,
-          name: 'wirtualny gabinet',
-          element: 'section.product'
-        },
-        {
-          id: 2,
-          name: 'rozwiązania indywidualne',
-          element: 'section.solutions'
-        },
-        {
-          id: 3,
-          name: 'kontakt',
-          element: 'section.contact'
-        }
-      ]
+  computed: {
+    items() {
+      return store.menuItems
     }
   },
   methods: {
@@ -76,6 +61,7 @@ export default {
   }
 }
 .about-navigation__separator{
+  color: $color-primary;
   margin: 0 10px;
 }
 .about-navigation__link {

@@ -25,9 +25,19 @@ export default {
     }
   },
   computed: {
+    mode() {
+      return this.$screen.mode
+    },
+    backgroundImage() {
+      if (this.visual.elementMobile) {
+        return this.mode === 'mobile' ? this.visual.elementMobile : this.visual.element
+      } else {
+        return this.visual.element
+      }
+    },
     style() {
       return `
-        background-image: url(${this.visual.element});
+        background-image: url(${this.backgroundImage});
         background-position: ${this.visual.position || 'center'}
       `
     }

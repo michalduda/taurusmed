@@ -1,5 +1,6 @@
 @import 'normalize.css/normalize';
 @import '~@/styles/bootstrap/bootstrap-grid.scss';
+@import '~@/styles/hamburger';
 // @import url("https://use.typekit.net/pxd8seh.css");
 @import url('https://use.typekit.net/uza3qya.css');
 
@@ -18,7 +19,10 @@ body {
   min-width: 320px;
   overflow-x: hidden;
 }
-
+.body--no-overflow{
+  overflow-y: hidden;
+  padding-right: 17px;
+}
 a {
   color: $color-primary;
 }
@@ -40,7 +44,7 @@ textarea {
 textarea{
   resize: vertical;
 }
-button {
+button, .button {
   border: 2px solid $color-primary;
   color: $color-primary;
   font-weight: bold;
@@ -49,9 +53,25 @@ button {
   padding: 10px 15px;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: color .2s ease-out, background-color .2s ease-out;
   &[disabled] {
     color: $color-darkgray;
     border-color: $color-darkgray;
+  }
+  &:hover{
+    color: white;
+    background: $color-primary;
+  }
+  &.secondary{
+    color:$color-secondary;
+    border-color: $color-secondary;
+    &:hover{
+      color: white;
+      background: $color-secondary;
+    }
   }
 }
 

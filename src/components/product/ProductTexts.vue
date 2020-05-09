@@ -6,7 +6,7 @@
           src="@/assets/medictel-1.0.svg"
           alt="Medictel logo"
           class="product-texts__logo"
-        >
+        />
         <p
           class="product-texts__text bold"
         >
@@ -27,15 +27,20 @@ export default {}
 </script>
 
 <style lang="scss">
-.product-texts{
-  @include sm{
+.product-texts {
+  @include sm {
     margin-bottom: 50px;
   }
-  @include lg{
+  @include lg {
     margin-bottom: 0;
   }
 }
-.product-texts__logo{
+.product-texts__text {
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.product-texts__logo {
   height: 25px;
   margin-bottom: 32px;
 }
