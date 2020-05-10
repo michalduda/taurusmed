@@ -16,8 +16,15 @@
             /
           </span>
           <span>
-            Wonderland
+            <img
+              src="@/assets/text-wonderland.svg"
+              alt="Wonderland"
+              class="mission__text-img"
+            >
           </span>
+          <!-- <span>
+            Wonderland
+          </span> -->
         </div>
       </div>
     </div>
@@ -46,6 +53,13 @@ section.mission {
     span {
       margin: 0 10px;
     }
+  }
+}
+.mission__text-img{
+  max-width: none;
+  height: 1rem;
+  @include sm {
+    height: 1.15rem;
   }
 }
 </style>
