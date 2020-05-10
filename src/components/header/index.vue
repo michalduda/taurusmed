@@ -78,7 +78,7 @@ export default {
   @include md{
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 5.85%;
+    margin-left: 7.85%;
   }
 }
 </style>
