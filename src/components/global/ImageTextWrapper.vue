@@ -6,7 +6,9 @@
           class="image-text__visual"
           v-bind="{ style }"
         >
-          <slot name="visual-slot" />
+          <div class="visual-slot">
+            <slot name="visual-slot" />
+          </div>
         </div>
       </div>
     </div>
@@ -59,7 +61,8 @@ export default {
   mix-blend-mode: screen;
   background-size: cover;
   width: 57.143%;
-  min-height: 420px;
+  position: relative;
+  padding-bottom: (330/430*100%);
   display: flex;
   align-items: flex-end;
   @include sm {
@@ -70,6 +73,12 @@ export default {
     width: 53.846%;
     min-height: 590px;
   }
+}
+.visual-slot{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
 .image-text__text-wrapper {
   display: flex;

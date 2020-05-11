@@ -6,17 +6,17 @@
     <p
       class="about-texts__text bold"
     >
-      Dostarczamy dedykowane systemy informatyczne stworzone z myślą o ludzkiej stronie cyfrowej medycyny. Stawiamy na estetykę i funkcjonalność.
+      Dostarczamy dedykowane  systemy informatyczne stworzone z myślą o ludzkiej stronie cyfrowej medycyny.
     </p>
     <p
       class="about-texts__text"
     >
-      Nasze produkty są zaprojektowane z dbałością o komfort i łatwość użytkowania: intuicyjne i zintegrowane.
+      Nasze produkty są zaprojektowane z dbałością o komfort i łatwość użytkowania: intuicyjne i zintegrowane. Stawiamy na estetykę i funkcjonalność.
     </p>
     <p
       class="about-texts__text"
     >
-      Łatwe w użyciu dla pacjenta i specjalistów. Pozwalają zdigitalizować usługę zachowując jej indywidualny charakter spotkań.
+      Łatwe w użyciu dla pacjenta i specjalistów. Pozwalają zdigitalizować usługę zachowując jej indywidualny charakter.
     </p>
   </div>
 </template>

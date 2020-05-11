@@ -8,13 +8,13 @@
     </p>
     <ul class="solutions-texts__list">
       <li>
-        Projektujemy serwisy, sklepy internetowe i sklepy z badaniami
+        Projektujemy wirtualne gabinety i sklepy z badaniami
       </li>
       <li>
         Tworzymy aplikacje web, iOS, android i systemy telemedyczne
       </li>
       <li>
-        Prowadzimy bazy danych, zdalne zlecanie badań
+        Implementujemy bazy danych, zdalne zlecanie badań
       </li>
       <li>
         Wdrażamy cyfrową archiwizację wizyt, realizację płatności i systemy rezerwacji

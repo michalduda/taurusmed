@@ -88,10 +88,8 @@ export default {
   margin: 3rem 0;
 }
 .navigation-menu__link{
-  text-transform: uppercase;
   font-size: 1.75rem;
   text-decoration: none;
-  font-weight: 600;
 }
 .fade-enter-active,
 .fade-leave-active {
