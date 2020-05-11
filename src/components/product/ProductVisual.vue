@@ -1,10 +1,10 @@
 <template>
   <div class="product-visual">
     <div class="product-visual__wrapper">
-      <a class="button secondary product-visual__button">
-        Zobacz Medictel
-      </a>
       <div class="product-visual__photo-wrapper">
+        <a class="button secondary product-visual__button">
+          Sprawdź Medictel
+        </a>
         <img
           class="product-visual__photo"
           src="@/assets/product-medictel.png"
@@ -25,21 +25,41 @@
 <style lang="scss">
 .product-visual__wrapper {
   display: flex;
-  padding-top: 100px;
+  padding-top: 50px;
   position: relative;
+  margin-top: 50px;
+  @include md {
+    margin-top: 0px;
+    padding-top: 100px;
+  }
 }
 .product-visual__button {
   position: absolute;
-  bottom: 50px;
-  margin-left: (1 / 14 * 100%);
+  top: 0;
+  transform: translate(0, -61%);
   min-width: (2.5 / 14 * 100%);
   z-index: 3;
+  @media (min-width: 420px) {
+    margin-left: (1 / 14 * 100%);
+  }
+  @include md {
+    transform: none;
+    top: auto;
+    left: 0;
+    bottom: 50px;
+    margin-left: (1 / 14 * 100%);
+    min-width: (2.5 / 14 * 100%);
+  }
 }
 .product-visual__photo-wrapper {
-  width: (7.5 / 14 * 100%);
-  margin-left: (3 / 14 * 100%);
-  position: relative;
+  width: (10.5 / 14 * 100%);
   z-index: 2;
+  position: relative;
+  @include md {
+    position: initial;
+    width: (7.5 / 14 * 100%);
+    margin-left: (3 / 14 * 100%);
+  }
 }
 .product-visual__photo {
   display: block;
@@ -60,7 +80,10 @@
   background: red;
   position: absolute;
   right: (2 / 6.5 * 100%);
-  bottom: 50px;
+  bottom: 30px;
+  @include md {
+    bottom: 50px;
+  }
 }
 .product-visual__claim {
   margin: 0;
@@ -68,10 +91,16 @@
   transform: rotate(-90deg) translate(-5%, 50%);
   position: absolute;
   display: inline-block;
-  font-size: 1.35rem;
+  font-size: 0.8rem;
   color: #fff;
   white-space: nowrap;
   bottom: 0;
   left: 0;
+  @media (min-width: 420px) {
+    font-size: 1rem;
+  }
+  @include md {
+    font-size: 1.35rem;
+  }
 }
 </style>
