@@ -10,7 +10,7 @@
       </div>
       <div class="col-claim col-12 offset-1 col-sm-11 col-md-8 offset-md-0">
         <p class="main-header__claim">
-          profesjonalne systemy informatyczne
+          Profesjonalne rozwiązania IT dla medycyny
         </p>
       </div>
       <div class="col-hamburger col-auto d-md-none">

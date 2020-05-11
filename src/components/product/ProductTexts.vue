@@ -10,7 +10,7 @@
         <p
           class="product-texts__text bold"
         >
-          Kompleksowe oprogramowanie wirtualnych gabinetów i przychodni.
+          Kompleksowe oprogramowanie dla wirtualnych gabinetów i przychodni.
         </p>
         <p
           class="product-texts__text"
