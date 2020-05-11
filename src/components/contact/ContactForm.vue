@@ -170,10 +170,8 @@ export default {
   flex-wrap: wrap;
 }
 .contact-form__message {
-  margin-top: 5px;
-  @include md{
-    margin-top: 10px;
-  }
+  margin-top: 25px;
+  min-height: 175px;
 }
 .contact-form__notification {
   width: 100%;
