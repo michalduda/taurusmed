@@ -39,9 +39,7 @@
   transform: translate(0, -61%);
   min-width: (2.5 / 14 * 100%);
   z-index: 3;
-  @media (min-width: 420px) {
-    margin-left: (1 / 14 * 100%);
-  }
+  margin-left: (1 / 14 * 100%);
   @include md {
     transform: none;
     top: auto;
@@ -67,12 +65,15 @@
 }
 .product-visual__background {
   background: $color-secondary;
-  width: (6.5 / 14 * 100%);
+  width: (6 / 14 * 100%);
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   z-index: 1;
+  @media (min-width: 420px) {
+    width: (6.5 / 14 * 100%);
+  }
 }
 .product-visual__claim-wrapper {
   width: 1px;
