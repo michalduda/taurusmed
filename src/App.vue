@@ -3,10 +3,14 @@
     <navigation-menu />
     <section-header />
     <section-about />
-    <section-product />
+    <section-product id="product" />
     <section-mission />
-    <section-solutions />
-    <section-contact />
+    <section-solutions id="solutions" />
+    <section-contact
+      id="contact"
+      class="section--custom-margin"
+    />
+    <page-footer />
   </div>
 </template>
 
@@ -19,6 +23,7 @@ import SectionProduct from '@/components/product'
 import SectionMission from '@/components/mission'
 import SectionSolutions from '@/components/solutions'
 import SectionContact from '@/components/contact'
+import PageFooter from '@/components/footer'
 
 export default {
   name: 'App',
@@ -29,7 +34,8 @@ export default {
     SectionProduct,
     SectionMission,
     SectionSolutions,
-    SectionContact
+    SectionContact,
+    PageFooter
   }
 }
 </script>
@@ -38,5 +44,11 @@ export default {
 #app {
   max-width: 1366px;
   margin: auto;
+}
+.section--custom-margin{
+  margin-bottom: 50px;
+  @include md{
+    margin-bottom: 0;
+  }
 }
 </style>

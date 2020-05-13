@@ -6,17 +6,17 @@ export const store = Vue.observable({
     {
       id: 1,
       name: 'wirtualny gabinet',
-      element: 'section.product'
+      element: '#product'
     },
     {
       id: 2,
       name: 'rozwiązania indywidualne',
-      element: 'section.solutions'
+      element: '#solutions'
     },
     {
       id: 3,
       name: 'kontakt',
-      element: 'section.contact'
+      element: '#contact'
     }
   ]
 })

@@ -2,7 +2,7 @@
   <div class="solutions-buttons">
     <button
       class="solutions-button"
-      @click="scrollToElement($event, 'section.contact')"
+      @click="scrollToElement($event, '#contact')"
     >
       Skontaktuj się z nami
     </button>

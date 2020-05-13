@@ -61,16 +61,21 @@ button, .button {
     color: $color-darkgray;
     border-color: $color-darkgray;
   }
-  &:hover{
-    color: white;
-    background: $color-primary;
+  @media (hover: hover) {
+    &:hover{
+      color: white;
+      background: $color-primary;
+    }
   }
+  
   &.secondary{
     color:$color-secondary;
     border-color: $color-secondary;
-    &:hover{
-      color: white;
-      background: $color-secondary;
+    @media (hover: hover) {
+      &:hover{
+        color: white;
+        background: $color-secondary;
+      }
     }
   }
 }
@@ -79,7 +84,7 @@ h2 {
   font-size: 1.556rem;
 }
 
-section {
+section, footer {
   margin-bottom: 50px;
   @include md{
     margin-bottom: 100px;
