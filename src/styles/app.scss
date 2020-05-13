@@ -61,16 +61,21 @@ button, .button {
     color: $color-darkgray;
     border-color: $color-darkgray;
   }
-  &:hover{
-    color: white;
-    background: $color-primary;
+  @media (hover: hover) {
+    &:hover{
+      color: white;
+      background: $color-primary;
+    }
   }
+  
   &.secondary{
     color:$color-secondary;
     border-color: $color-secondary;
-    &:hover{
-      color: white;
-      background: $color-secondary;
+    @media (hover: hover) {
+      &:hover{
+        color: white;
+        background: $color-secondary;
+      }
     }
   }
 }
