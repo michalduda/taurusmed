@@ -84,7 +84,7 @@ h2 {
   font-size: 1.556rem;
 }
 
-section {
+section, footer {
   margin-bottom: 50px;
   @include md{
     margin-bottom: 100px;
