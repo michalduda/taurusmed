@@ -3,10 +3,13 @@
     <navigation-menu />
     <section-header />
     <section-about />
-    <section-product />
+    <section-product id="product" />
     <section-mission />
-    <section-solutions />
-    <section-contact class="section--custom-margin"/>
+    <section-solutions id="solutions" />
+    <section-contact
+      id="contact"
+      class="section--custom-margin"
+    />
     <page-footer />
   </div>
 </template>

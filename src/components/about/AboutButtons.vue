@@ -2,13 +2,13 @@
   <div class="about-buttons">
     <button
       class="about-button"
-      @click="scrollToElement($event, 'section.product')"
+      @click="scrollToElement($event, '#product')"
     >
       Oprogramowanie
     </button>
     <button
       class="about-button"
-      @click="scrollToElement($event, 'section.solutions')"
+      @click="scrollToElement($event, '#solutions')"
     >
       Rozwiązania indywidualne
     </button>
