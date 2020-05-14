@@ -19,10 +19,12 @@ body {
   min-width: 320px;
   overflow-x: hidden;
 }
+
 .body--no-overflow{
   overflow-y: hidden;
   padding-right: 17px;
 }
+
 a {
   color: $color-primary;
 }
@@ -41,9 +43,11 @@ textarea {
     outline: none;
   }
 }
+
 textarea{
   resize: vertical;
 }
+
 button, .button {
   border: 2px solid $color-primary;
   color: $color-primary;
@@ -78,6 +82,10 @@ button, .button {
       }
     }
   }
+}
+
+button.no-styling {
+
 }
 
 h2 {

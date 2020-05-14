@@ -15,10 +15,12 @@
             class="navigation-menu__link"
             @click="handleScroll($event, item.element)"
           >
-            {{ item.name }}
+            {{ $t(item.name) }}
           </a>
         </li>
       </ul>
+      <language-picker class="language-picker--mobile" />
+
     </nav>
   </transition>
 </template>
@@ -26,8 +28,12 @@
 <script>
 import scrollToElement from '@/helpers/scrollToElement'
 import { store, mutations } from '@/store'
+import LanguagePicker from '@/components/header/LanguagePicker'
 
 export default {
+  components: {
+    LanguagePicker
+  },
   computed: {
     isActive() {
       return store.menuActive
@@ -65,7 +71,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .navigation-menu__modal {
   position: fixed;
   z-index: 2;
@@ -75,9 +81,11 @@ export default {
   left: 0;
   right: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-wrap: wrap;
 }
 .navigation-menu__list{
   margin: 0;
@@ -90,6 +98,16 @@ export default {
 .navigation-menu__link{
   font-size: 1.75rem;
   text-decoration: none;
+}
+.language-picker--mobile{
+  .language-picker__item{
+    font-size: 1.75rem;
+    color: $color-primary;
+  }
+  .language-picker__link{
+    text-transform: lowercase;
+    margin: 0 15px;
+  }
 }
 .fade-enter-active,
 .fade-leave-active {

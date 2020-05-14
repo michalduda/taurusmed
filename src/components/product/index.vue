@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 offset-1 col-md-10 offset-md-2">
         <h2 class="product__header">
-          Wirtualny gabinet
+          {{ $t('product.header') }}
         </h2>
       </div>
     </div>

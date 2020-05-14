@@ -1,22 +1,22 @@
 <template>
   <div class="about-texts">
     <h2 class="about-texts__header">
-      Podejmujemy wyzwanie cyfrowej medycyny.
+      {{ $t('about.header') }}
     </h2>
     <p
       class="about-texts__text bold"
+      v-html="$t('about.text1')"
     >
-      Dostarczamy dedykowane  systemy informatyczne stworzone z myślą o ludzkiej stronie cyfrowej medycyny.
     </p>
     <p
       class="about-texts__text"
+      v-html="$t('about.text2')"
     >
-      Nasze produkty są zaprojektowane z dbałością o komfort i łatwość użytkowania: intuicyjne i zintegrowane. Stawiamy na estetykę i funkcjonalność.
     </p>
     <p
       class="about-texts__text"
+      v-html="$t('about.text3')"
     >
-      Łatwe w użyciu dla pacjenta i specjalistów. Pozwalają zdigitalizować usługę zachowując jej indywidualny charakter.
     </p>
   </div>
 </template>

@@ -10,12 +10,12 @@
         <p
           class="product-texts__text bold"
         >
-          Kompleksowe oprogramowanie dla wirtualnych gabinetów i przychodni.
+          {{ $t('product.text1') }}
         </p>
         <p
           class="product-texts__text"
         >
-          Stworzyliśmy dwie wersje dedykowanego oprogramowania: skierowane do obiorców indywidualnych oraz instytucji ochrony zdrowia.
+          {{ $t('product.text2') }}
         </p>
       </div>
     </div>
