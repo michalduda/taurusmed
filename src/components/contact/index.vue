@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 offset-1 col-xl-8 offset-xl-3">
         <h2 class="contact__header">
-          Kontakt
+          {{ $t('product.header') }}
         </h2>
       </div>
     </div>
@@ -23,9 +23,9 @@
               <div class="contact__texts">
                 <a
                   class="contact__link"
-                  href="mailto:kontakt@taurusmed.pl"
+                  :href="`mailto:${$t('contact.email')}`"
                 >
-                  kontakt@taurusmed.pl
+                  {{ $t('contact.email') }}
                 </a>
               </div>
             </div>

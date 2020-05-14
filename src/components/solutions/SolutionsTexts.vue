@@ -1,23 +1,27 @@
 <template>
   <div class="solutions-texts">
-    <h2 class="solutions-texts__header">
-      Rozwiązania indywidualne
+    <h2
+      class="solutions-texts__header"
+      v-html="$t('solutions.header')"
+    >
     </h2>
-    <p class="solutions-texts__text bold">
-      Tworzymy indywidualne, dedykowane opiece medycznej systemy, umożliwiające zdigitalizowanie działalności oraz usprawnienie lub automatyzację procesów:
+    <p
+      class="solutions-texts__text bold"
+      v-html="$t('solutions.text1')"
+    >
     </p>
+    <p
+      class="solutions-texts__text"
+      v-html="$t('solutions.text2')"
+    ></p>
     <ul class="solutions-texts__list">
-      <li>
-        Projektujemy wirtualne gabinety i sklepy z badaniami
+      <li v-html="$t('solutions.list[0]')">
       </li>
-      <li>
-        Tworzymy aplikacje web, iOS, android i systemy telemedyczne
+      <li v-html="$t('solutions.list[1]')">
       </li>
-      <li>
-        Implementujemy bazy danych, zdalne zlecanie badań
+      <li v-html="$t('solutions.list[2]')">
       </li>
-      <li>
-        Wdrażamy cyfrową archiwizację wizyt, realizację płatności i systemy rezerwacji
+      <li v-html="$t('solutions.list[3]')">
       </li>
     </ul>
   </div>

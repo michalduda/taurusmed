@@ -5,17 +5,17 @@ export const store = Vue.observable({
   menuItems: [
     {
       id: 1,
-      name: 'wirtualny gabinet',
+      name: 'nav.product',
       element: '#product'
     },
     {
       id: 2,
-      name: 'rozwiązania indywidualne',
+      name: 'nav.solutions',
       element: '#solutions'
     },
     {
       id: 3,
-      name: 'kontakt',
+      name: 'nav.contact',
       element: '#contact'
     }
   ]

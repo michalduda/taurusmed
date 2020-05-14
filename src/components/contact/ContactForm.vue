@@ -8,7 +8,7 @@
       type="text"
       name="email"
       class="contact-form__email"
-      placeholder="email"
+      :placeholder="$t('contact.emailLabel')"
       :disabled="formState === formStates.SENDING || formState === formStates.SENT"
       @keyup="validateEmail"
     />
@@ -16,14 +16,14 @@
       v-if="emailError"
       class="contact-form__error-messages"
     >
-      {{ emailError }}
+      {{ $t(`contact.${emailError}`) }}
     </p>
 
     <textarea
       v-model="message"
       name="message"
       class="contact-form__message"
-      placeholder="napisz wiadomość"
+      :placeholder="$t('contact.messageLabel')"
       :disabled="formState === formStates.SENDING || formState === formStates.SENT"
       @keyup="validateMessage"
     ></textarea>
@@ -31,7 +31,7 @@
       v-if="messageError"
       class="contact-form__error-messages"
     >
-      {{ messageError }}
+      {{ $t(`contact.${messageError}`) }}
     </p>
 
     <p
@@ -39,7 +39,7 @@
       class="contact-form__notification"
       :class="{ 'contact-form__notification--error': formState === formStates.ERROR }"
     >
-      {{ notification }}
+      {{ $t(`contact.${notification}`) }}
     </p>
 
     <base-button
@@ -48,7 +48,7 @@
       class="contact-form__button"
       type="submit"
     >
-      Wyślij wiadomość
+      {{ $t('contact.sendButton') }}
     </base-button>
   </form>
 
@@ -73,10 +73,10 @@ export default {
         ERROR: 'error'
       },
       formTexts: {
-        MESSAGE_SENT: 'Twoja wiadomość została wysłana',
-        ERROR_SENDING: 'Wystąpił błąd podczas wysyłania wiadomości',
-        ERROR_NO_MESSAGE: 'Wprowadź wiadomość',
-        ERROR_INVALID_EMAIL: 'Wprowadź poprawny adres email'
+        MESSAGE_SENT: 'MESSAGE_SENT',
+        ERROR_SENDING: 'ERROR_SENDING',
+        ERROR_NO_MESSAGE: 'ERROR_NO_MESSAGE',
+        ERROR_INVALID_EMAIL: 'ERROR_INVALID_EMAIL'
       }
     }
   },
@@ -190,5 +190,6 @@ export default {
 .contact-form__button {
   margin-top: 25px;
   margin-left: auto;
+  z-index: 2;
 }
 </style>

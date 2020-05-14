@@ -11,7 +11,7 @@
             class="about-navigation__link"
             @click="scrollToElement($event, item.element)"
           >
-            {{ item.name }}
+            {{ $t(item.name) }}
           </a>
         </li>
         <li

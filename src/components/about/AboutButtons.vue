@@ -4,13 +4,13 @@
       class="about-button"
       @click="scrollToElement($event, '#product')"
     >
-      Oprogramowanie
+      {{ $t('about.buttonProduct') }}
     </button>
     <button
       class="about-button"
       @click="scrollToElement($event, '#solutions')"
     >
-      Rozwiązania indywidualne
+      {{ $t('about.buttonSolutions') }}
     </button>
   </div>
 </template>

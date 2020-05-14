@@ -4,7 +4,7 @@
       class="solutions-button"
       @click="scrollToElement($event, '#contact')"
     >
-      Skontaktuj się z nami
+      {{ $t('product.button') }}
     </button>
   </div>
 </template>

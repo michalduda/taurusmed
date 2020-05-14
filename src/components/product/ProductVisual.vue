@@ -3,7 +3,7 @@
     <div class="product-visual__wrapper">
       <div class="product-visual__photo-wrapper">
         <a class="button secondary product-visual__button">
-          Sprawdź Medictel
+          {{ $t('product.button') }}
         </a>
         <img
           class="product-visual__photo"
@@ -14,7 +14,7 @@
       <div class="product-visual__background">
         <div class="product-visual__claim-wrapper">
           <p class="product-visual__claim">
-            Aesthetics and functionality
+            {{ $t('product.claim') }}
           </p>
         </div>
       </div>

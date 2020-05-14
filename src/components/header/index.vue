@@ -10,22 +10,27 @@
       </div>
       <div class="col-claim col-12 offset-1 col-sm-11 col-md-8 offset-md-0">
         <p class="main-header__claim">
-          Profesjonalne rozwiązania IT dla medycyny
+          {{ $t('header.claim') }}
         </p>
       </div>
       <div class="col-hamburger col-auto d-md-none">
         <header-hamburger />
       </div>
+      <div class="col-languages d-none d-md-block">
+        <language-picker />
+      </div>
     </div>
-
   </header>
 </template>
 
 <script>
 import HeaderHamburger from '@/components/header/HeaderHamburger'
+import LanguagePicker from '@/components/header/LanguagePicker'
+
 export default {
   components: {
-    HeaderHamburger
+    HeaderHamburger,
+    LanguagePicker
   }
 }
 </script>
@@ -50,6 +55,12 @@ export default {
   .hamburger{
     margin-right: -15px;
   }
+}
+.col-languages{
+  order: 2;
+  margin-right: (1/14*100%);
+  text-align: right;
+  margin-left: auto;
 }
 .main-header__logo {
   width: 100%;
