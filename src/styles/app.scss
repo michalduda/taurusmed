@@ -65,7 +65,7 @@ button, .button {
     color: $color-darkgray;
     border-color: $color-darkgray;
   }
-  @media (hover: hover) {
+  @media (pointer: fine) {
     &:hover{
       color: white;
       background: $color-primary;
@@ -75,7 +75,7 @@ button, .button {
   &.secondary{
     color:$color-secondary;
     border-color: $color-secondary;
-    @media (hover: hover) {
+    @media (pointer: fine) {
       &:hover{
         color: white;
         background: $color-secondary;
