@@ -37,7 +37,7 @@ export default {
     },
     contact: {
       header: 'Kontakt',
-      email: 'kontakt@taurusmed.pl',
+      email: 'hello@taurusmed.pl',
       emailLabel: 'email',
       messageLabel: 'napisz wiadomość',
       sendButton: 'Wyślij wiadomość',
@@ -87,7 +87,7 @@ export default {
     },
     contact: {
       header: 'Contact',
-      email: 'hello@taurusmed.pl',
+      email: 'hello@taurusmed.eu',
       emailLabel: 'email',
       messageLabel: 'Write your message',
       sendButton: 'Write to us',

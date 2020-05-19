@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 offset-1 col-xl-8 offset-xl-3">
         <h2 class="contact__header">
-          {{ $t('product.header') }}
+          {{ $t('contact.header') }}
         </h2>
       </div>
     </div>
