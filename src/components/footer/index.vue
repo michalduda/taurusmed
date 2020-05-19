@@ -4,7 +4,7 @@
       <div class="col-12 offset-1 col-xl-8 offset-xl-3">
         <div class="social-links">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/taurusmed.eu"
             target="_blank"
             class="social-links__link"
           >
@@ -15,7 +15,7 @@
             >
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/taurusmed_eu/"
             target="_blank"
             class="social-links__link"
           >
@@ -26,7 +26,7 @@
             >
           </a>
           <a
-            href="https://twitter.com"
+            href="https://twitter.com/taurusmed_eu"
             target="_blank"
             class="social-links__link"
           >
@@ -37,7 +37,7 @@
             >
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/taurusmed/"
             target="_blank"
             class="social-links__link"
           >
