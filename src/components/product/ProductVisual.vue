@@ -2,7 +2,11 @@
   <div class="product-visual">
     <div class="product-visual__wrapper">
       <div class="product-visual__photo-wrapper">
-        <a class="button secondary product-visual__button">
+        <a
+          href="https://www.facebook.com/medictel.eu"
+          target="_blank"
+          class="button secondary product-visual__button"
+        >
           {{ $t('product.button') }}
         </a>
         <img
